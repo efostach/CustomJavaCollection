@@ -88,4 +88,44 @@ public class CustomCollection {
         }
         return null;
     }
+
+    boolean isDuplicatesExist(){
+        int value;
+        int index = 0;
+
+        while (index < array.length) {
+            value = array[index];
+
+            for (int i = 0; i < array.length; i++) {
+                int duplicatesCount = 1;
+                if (i == index)
+                    i++;
+                else if (array[i] == value)
+                    duplicatesCount++;
+
+                if (duplicatesCount > 1) return true;
+            }
+            index++;
+        }
+        return false;
+    }
+
+    int[] searchTerms(int number){
+        if(array.length > 0){
+            int sum;
+            int[] result = new int[2];
+            for(int i = 0; i < array.length; i++){
+                for(int k = 0; k < array.length; k++) {
+                    if(k == i && (k + 1) < array.length) k++;
+                    sum = array[i] + array[k];
+                    if(sum == number) {
+                        result[0] = i;
+                        result[1] = k;
+                        return result;
+                    }
+                }
+            }
+        }
+        return null;
+    }
 }
