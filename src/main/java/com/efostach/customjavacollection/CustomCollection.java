@@ -33,7 +33,6 @@ public class CustomCollection {
         return array = newArray;
     }
 
-
     Integer searchByIndex(int index) {
         if (index < 0 || index > array.length) return null;
         return array[index];
