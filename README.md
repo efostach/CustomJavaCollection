@@ -1,5 +1,4 @@
 # CustomJavaCollection
-Custom collection development.
 
 Custom collection can manipulate of integer values and forbid adding to collection null, symbols and other types as value.
 
@@ -14,19 +13,19 @@ Current collection presents an array and provides the following operations:
   - isDuplicatesExist();
   - searchTerms();
 
-How methods work?
+## How methods work?
 
-  add() - adding value to the end of the collection and simultaneously increasing existing values on added value.
+  - add() - adding value to the end of the collection and simultaneously increasing existing values on added value.
 
-  delete() - deleting value from the collection and simultaneously decreasing existing values on deleted value.
+  - delete() - deleting value from the collection and simultaneously decreasing existing values on deleted value.
 
-  searchTerms() - finding two indexes of the collection that gives a sum equals to input value.
-                  For example, array = [3, 8, 15, 17], Number = 23, Result = [1,2].
+  - searchTerms() - finding two indexes of the collection that gives a sum equals to input value.
+                    For example, array = [3, 8, 15, 17], Number = 23, Result = [1,2].
 
 
-Examples of the work.
+## Examples of the work.
 
------ Test case for array[0] -----
+### Test case for array[0]
 
 Add    element = 5    result: [5]
 
@@ -44,9 +43,7 @@ Min value     = null
 
 Sum of elements is 2.   The number of elements: null
 
-
-
------ Test case for array[n] -----
+### Test case for array[n]
 
 Add    element = 1    result: [1]
 Add    element = 2    result: [3, 2]
